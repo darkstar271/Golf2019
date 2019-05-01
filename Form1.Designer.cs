@@ -67,6 +67,8 @@
             this.txtStreet = new System.Windows.Forms.TextBox();
             this.txtHandicap = new System.Windows.Forms.TextBox();
             this.txtAvailable = new System.Windows.Forms.TextBox();
+            this.DGVgolf = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVgolf)).BeginInit();
             this.SuspendLayout();
             // 
             // btn1
@@ -176,6 +178,7 @@
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -186,6 +189,7 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // label1
             // 
@@ -385,11 +389,21 @@
             this.txtAvailable.Size = new System.Drawing.Size(163, 26);
             this.txtAvailable.TabIndex = 26;
             // 
+            // DGVgolf
+            // 
+            this.DGVgolf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVgolf.Location = new System.Drawing.Point(12, 2);
+            this.DGVgolf.Name = "DGVgolf";
+            this.DGVgolf.Size = new System.Drawing.Size(655, 389);
+            this.DGVgolf.TabIndex = 28;
+            this.DGVgolf.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVgolf_CellContentClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 690);
+            this.Controls.Add(this.DGVgolf);
             this.Controls.Add(this.txtHandicap);
             this.Controls.Add(this.txtAvailable);
             this.Controls.Add(this.txtCity);
@@ -421,6 +435,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGVgolf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,6 +482,7 @@
         private System.Windows.Forms.TextBox txtStreet;
         private System.Windows.Forms.TextBox txtHandicap;
         private System.Windows.Forms.TextBox txtAvailable;
+        private System.Windows.Forms.DataGridView DGVgolf;
     }
 }
 
